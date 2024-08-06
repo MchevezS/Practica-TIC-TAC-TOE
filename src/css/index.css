@@ -1,0 +1,42 @@
+.titulo1{
+  font-size: 80px;  
+    text-align: center;
+
+}
+.titulo2{
+    font-size: 80px;  
+    text-align: center;
+}
+.titulo3{
+    font-size: 80px;  
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    background-color:rgb(167, 158, 158) ;
+
+}
+
+.contenedorCasillas{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;   
+width: 330px;
+margin: 120px auto;
+margin-top: 320px;
+}
+
+.casillas{
+background-color: #f3ea60;
+width: 100px;
+height: 100px;
+display: flex;
+align-items: center;
+font-size: 60px;
+cursor: pointer;
+box-shadow: 4px 4px #b95555;
+
+}
