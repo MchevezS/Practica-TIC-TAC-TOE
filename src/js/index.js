@@ -6,6 +6,7 @@ let conteo = 0;
 let ganadorFigura;
 let btnVJugar = document.getElementById("btnVJugar");
 
+
 // Funcion que maneja el movimiento del usuario
 function movimientoUsuario(e) {
    if (e.target.innerHTML === '') {
@@ -27,8 +28,9 @@ function movimientoUsuario(e) {
         if (!ganoYa && !empate()) {
             maquina();    
         }
+        }
    }
-}
+
 
 // Añadi un evento de click a cada casilla para manejar el movimiento del usuario
 Array.from(casillasV).forEach(casilla => casilla.addEventListener('click', movimientoUsuario));
@@ -39,13 +41,18 @@ function CheckLine(c1, c2, c3) {
         ganadorFigura = casillasV[c1].innerHTML;
         ganador(ganadorFigura);
         ganoYa = true;
+        Array.from(casillasV).forEach(casilla => casilla.addEventListener('click', ()=>{   //Si hay ganador No dejara que el jugador siga marcando, tiene que reiniciar la partida
+            alert("Porfavor Reiniciar la partida")
+        }));
     }
 } 
 
 // Funcion que muestra el mensaje de ganador
 function ganador(player1) {
-    document.querySelector('#Resultado').innerHTML = player1 + ' Has ganado👏🏻';
-    alert(player1 +' Felicidades has ganado🥳');
+    document.querySelector('#Resultado').innerHTML = player1 + ' Haz ganado👏🏻';
+    alert(`Felicidades ${player1} haz ganado 🥳`)
+    Array.from(casillasV).forEach(casilla => casilla.removeEventListener('click', movimientoUsuario));
+    
 }
 
 // Funcion que verifica si el juego ha terminado en empate
