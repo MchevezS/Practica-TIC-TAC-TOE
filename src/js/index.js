@@ -5,7 +5,16 @@ let ganoYa = false;
 let conteo = 0;
 let ganadorFigura;
 let btnVJugar = document.getElementById("btnVJugar");
+let contadorX = document.getElementById("contadorX");
+let contadorO = document.getElementById("contadorO");
 
+// Inicializar contadores desde el localStorage o en 0 si no existen
+let victoriasX = localStorage.getItem("victoriasX") ? parseInt(localStorage.getItem("victoriasX")) : 0;
+let victoriasO = localStorage.getItem("victoriasO") ? parseInt(localStorage.getItem("victoriasO")) : 0;
+
+// Actualizar los contadores en pantalla
+contadorX.innerText = victoriasX;
+contadorO.innerText = victoriasO;
 
 // Funcion que maneja el movimiento del usuario
 function movimientoUsuario(e) {
@@ -13,10 +22,10 @@ function movimientoUsuario(e) {
         e.target.innerHTML = '❌';
         conteo++;
         jugador = !jugador;
-
+    
         // Verifica posibles líneas ganadoras
         CheckLine(0,1,2);
-        CheckLine(3,4,5);
+        CheckLine(3,4,5); 
         CheckLine(6,7,8); 
         CheckLine(0,3,6); 
         CheckLine(1,4,7);
@@ -51,6 +60,15 @@ function CheckLine(c1, c2, c3) {
 function ganador(player1) {
     document.querySelector('#Resultado').innerHTML = player1 + ' Haz ganado👏🏻';
     alert(`Felicidades ${player1} haz ganado 🥳`)
+    if (player1 === "❌") {
+        victoriasX++;
+        localStorage.setItem("victoriasX", victoriasX);
+        contadorX.innerText = victoriasX;
+    } else {
+        victoriasO++;
+        localStorage.setItem("victoriasO", victoriasO);
+        contadorO.innerText = victoriasO;
+    }
     Array.from(casillasV).forEach(casilla => casilla.removeEventListener('click', movimientoUsuario));
     
 }

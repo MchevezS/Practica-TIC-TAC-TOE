@@ -14,18 +14,22 @@
 </div>
 
 <nav>
-    <div class="oyx">
-      <span>jugador</span>
+    <div class="Jugadores">
+      <span>Michelle</span>
       <span class="x">❌ </span>
+      <span>VS</span>
       <span class="o">⭕</span>
       <span>aleatorio</span>
     </div>
-    <div>
-       <div>Marcador</div>
-        <div id="contador"></div>
-    </div>
 </nav>
 
+<div class="marcadorContador">
+   <div class="marcador">Marcador</div>
+   <div class="contador" id="contadorX">0</div>
+   <div class="contadorO" id="contadorO">0</div>
+   <button id="Iniciar">Reiniciar contador</button>
+</div>
+<br>
 <div class="contenedorCasillas">
     <div class="casillas" id="casillas"></div>
     <div class="casillas" id="casillas"></div>
@@ -38,9 +42,8 @@
     <div class="casillas" id="casillas"></div>
 </div>
 
-<div id="Resultado"></div>
-
-<button id="btnVJugar"> volver a jugar</button>
+<div class="resultado" id="Resultado"></div>
+<button class="btnVJugar" id="btnVJugar"> volver a jugar</button>
 
 
 <script src="/src/js/index.js"></script>

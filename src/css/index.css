@@ -1,42 +1,128 @@
-.titulo1{
-  font-size: 80px;  
-    text-align: center;
-
-}
-.titulo2{
-    font-size: 80px;  
-    text-align: center;
-}
-.titulo3{
-    font-size: 80px;  
-    text-align: center;
-}
-body{
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    background-color:rgb(167, 158, 158) ;
-
 }
 
-.contenedorCasillas{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 10px;   
-width: 330px;
-margin: 120px auto;
-margin-top: 320px;
+/* Títulos */
+.contenedorTitulo {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.casillas{
-background-color: #f3ea60;
-width: 100px;
-height: 100px;
-display: flex;
-align-items: center;
-font-size: 60px;
-cursor: pointer;
-box-shadow: 4px 4px #b95555;
+.titulo1, .titulo2, .titulo3 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
 
+/* Nav - Jugadores */
+nav {
+    margin-bottom: 20px;
+}
+
+.Jugadores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c0baba;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Jugadores span {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.x {
+    color: red;
+}
+
+.o {
+    color: blue;
+}
+
+/* Marcador */
+.marcadorContador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.marcador {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contador {
+    font-size: 2em;
+    color: #555;
+}
+.contadorO{
+    margin-top:-40px;
+    position: relative;
+    margin-right: -90px;
+    font-size: 3em;
+    color: #555; 
+}
+
+/* Casillas del juego */
+.contenedorCasillas {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.casillas {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.casillas:hover {
+    background-color: #e1d5d5;
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Botón volver a jugar */
+.btnVJugar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnVJugar:hover {
+    background-color: #555;
 }
