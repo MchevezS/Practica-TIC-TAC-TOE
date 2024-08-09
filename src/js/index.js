@@ -16,6 +16,7 @@ let victoriasO = localStorage.getItem("victoriasO") ? parseInt(localStorage.getI
 contadorX.innerText = victoriasX;
 contadorO.innerText = victoriasO;
 
+
 // Funcion que maneja el movimiento del usuario
 function movimientoUsuario(e) {
    if (e.target.innerHTML === '') {
