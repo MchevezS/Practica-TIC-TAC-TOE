@@ -1,7 +1,7 @@
 /* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #a2c5d4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,14 +14,23 @@ body {
 .contenedorTitulo {
     text-align: center;
     margin-bottom: 20px;
+    margin-right: 160px;
+    margin-top: -10px;
 }
 
 .titulo1, .titulo2, .titulo3 {
     margin: 0;
     font-size: 2em;
-    color: #333;
+    color: #000000;
 }
 
+.titulo2{
+    margin-left: 90px ;
+}
+
+.titulo3{
+    margin-left: 160px;
+}
 /* Nav - Jugadores */
 nav {
     margin-bottom: 20px;
@@ -31,7 +40,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #c0baba;
+    background-color: #efe8e8;
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,7 +48,7 @@ nav {
 
 .Jugadores span {
     font-size: 1.5em;
-    color: #333;
+    color: #000000;    /* */
 }
 .vs{
     margin-right: 15px;
@@ -47,48 +56,69 @@ nav {
     color: #0e0f0e;
 }
 .x {
-    background-color: rgb(255, 255, 255);
+    background-color:#007bff;
     color: rgb(144, 247, 242);
 }
 
-.o {background-color: rgb(255, 255, 255);
+.o {
+    background-color: #dc3545;
     color: rgb(237, 130, 221);
 }
 
-/* Marcador */
+/* Marcador*/
 .marcadorContador {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    width: 50px;
-    height: 50px;
-}
-.cuadroMarcador{
-    background-color: #0e0f0e;
-    width: 150px;
-    height: 140px;
-    border-radius: 20px;
-}
-.marcador {
+    background-color: #f8f9fa;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    margin-top: 15px;
+  }
+  
+  .cuadroMarcador {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .marcador {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #495057;
     text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    color: #fefcfc;
-}
-
-.contador {
-    font-size: 2em;
-    color: #fffdfd;
-    border-radius: 10px;
-}
-.contadorO{
-    margin-top:-40px;
-    position: relative;
-    margin-right: -250px;
-    font-size: 3em;
-    color: #ffffff; 
-}
+    margin-bottom: 10px;
+  }
+  
+  .contador {
+    font-size: 2rem;
+    color: #007bff;
+    margin: 0 10px;
+  }
+  
+  .contadorO {
+    font-size: 2rem;
+    color: #dc3545;
+    margin: 0 10px;
+  }
+  
+  #eliminarMarcador {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #eliminarMarcador:hover {
+    background-color: #c82333;
+  }
 
 /* Casillas del juego */
 .contenedorCasillas {
