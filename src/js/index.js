@@ -7,7 +7,7 @@ let ganadorFigura;
 let btnVJugar = document.getElementById("btnVJugar");
 let contadorX = document.getElementById("contadorX");
 let contadorO = document.getElementById("contadorO");
-
+const eliminarMarcador = document.getElementById("eliminarMarcador")
 // Inicializar contadores desde el localStorage o en 0 si no existen
 let victoriasX = localStorage.getItem("victoriasX") ? parseInt(localStorage.getItem("victoriasX")) : 0;
 let victoriasO = localStorage.getItem("victoriasO") ? parseInt(localStorage.getItem("victoriasO")) : 0;
@@ -72,6 +72,15 @@ function ganador(player1) {
     Array.from(casillasV).forEach(casilla => casilla.removeEventListener('click', movimientoUsuario));
     
 }
+
+ // Añadí el evento click al boton eliminar para que se reiniciara el marcador.
+eliminarMarcador.addEventListener("click", ()=>{
+    victoriasX = 0
+    victoriasO = 0
+  contadorO.innerHTML=0
+  contadorX.innerHTML=0
+  localStorage.clear()
+})
 
 // Funcion que verifica si el juego ha terminado en empate
 function empate() {

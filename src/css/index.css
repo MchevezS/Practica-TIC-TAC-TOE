@@ -41,13 +41,18 @@ nav {
     font-size: 1.5em;
     color: #333;
 }
-
+.vs{
+    margin-right: 15px;
+    margin-left: 9px;
+    color: #0e0f0e;
+}
 .x {
-    color: red;
+    background-color: rgb(255, 255, 255);
+    color: rgb(144, 247, 242);
 }
 
-.o {
-    color: blue;
+.o {background-color: rgb(255, 255, 255);
+    color: rgb(237, 130, 221);
 }
 
 /* Marcador */
@@ -56,24 +61,33 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
 }
-
+.cuadroMarcador{
+    background-color: #0e0f0e;
+    width: 150px;
+    height: 140px;
+    border-radius: 20px;
+}
 .marcador {
+    text-align: center;
     font-size: 1.2em;
     margin-bottom: 5px;
-    color: #333;
+    color: #fefcfc;
 }
 
 .contador {
     font-size: 2em;
-    color: #555;
+    color: #fffdfd;
+    border-radius: 10px;
 }
 .contadorO{
     margin-top:-40px;
     position: relative;
-    margin-right: -90px;
+    margin-right: -250px;
     font-size: 3em;
-    color: #555; 
+    color: #ffffff; 
 }
 
 /* Casillas del juego */
@@ -82,6 +96,7 @@ nav {
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
+    margin-top: 50px;
 }
 
 .casillas {
